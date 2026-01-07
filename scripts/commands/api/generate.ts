@@ -1,10 +1,16 @@
-import { ChannelGuideObject } from '../../types/channel'
-import { SITES_DIR, API_DIR } from '../../constants'
-import { Logger, Collection } from '@freearhey/core'
-import epgGrabber, { EPGGrabber } from 'epg-grabber'
-import { Storage } from '@freearhey/storage-js'
-import { Channel } from '../../models'
+import { Logger, Storage, Collection } from '@freearhey/core'
+import { ChannelsParser } from '../../core'
 import path from 'path'
+import { SITES_DIR, API_DIR } from '../../constants'
+import { Channel } from 'epg-grabber'
+
+type OutputItem = {
+  channel: string | null
+  site: string
+  site_id: string
+  site_name: string
+  lang: string
+}
 
 async function main() {
   const logger = new Logger()
@@ -13,25 +19,27 @@ async function main() {
 
   logger.info('loading channels...')
   const sitesStorage = new Storage(SITES_DIR)
+  const parser = new ChannelsParser({ storage: sitesStorage })
 
-  const files: string[] = await sitesStorage.list('**/*.channels.xml')
+  let files: string[] = []
+  files = await sitesStorage.list('**/*.channels.xml')
 
-  const channels = new Collection<Channel>()
+  let parsedChannels = new Collection()
   for (const filepath of files) {
-    const xml = await sitesStorage.load(filepath)
-    const parsedChannels = EPGGrabber.parseChannelsXML(xml)
-    const channelsFromXML = new Collection(parsedChannels).map(
-      (channel: epgGrabber.Channel) => new Channel(channel.toObject())
-    )
-
-    channelsFromXML.forEach((channel: Channel) => {
-      channels.add(channel)
-    })
+    parsedChannels = parsedChannels.concat(await parser.parse(filepath))
   }
 
-  logger.info(`found ${channels.count()} channel(s)`)
+  logger.info(`  found ${parsedChannels.count()} channel(s)`)
 
-  const output = channels.map<ChannelGuideObject>((channel: Channel) => channel.getGuideObject())
+  const output = parsedChannels.map((channel: Channel): OutputItem => {
+    return {
+      channel: channel.xmltv_id || null,
+      site: channel.site || '',
+      site_id: channel.site_id || '',
+      site_name: channel.name,
+      lang: channel.lang || ''
+    }
+  })
 
   const apiStorage = new Storage(API_DIR)
   const outputFilename = 'guides.json'
