@@ -15,5 +15,5 @@ https://indian-tv-schedules.vercel.app/jiotv.xml.gz
 ```py
 https://indian-tv-schedules.vercel.app/tataplay.xml.gz
 ```
-### Credits 
+### Credits to all
 Special thanks to [K-vanc](https://github.com/K-vanc/Tempest-EPG-Generator.git) for the Tempest-EPG-Generator.
