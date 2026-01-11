@@ -1,7 +1,7 @@
 name: Indian EPG Grabber
 on:
   schedule:
-    - cron: '0 */4 * * *' # Grabs data every 4 hours
+    - cron: '0 */12 * * *' # Grabs data every 12 hours
   workflow_dispatch: # Allows you to grab manually
 
 jobs:
