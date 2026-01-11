@@ -22,15 +22,15 @@ jobs:
           cd epg-temp
           npm ci
       
-      - name: Copy India channels
+      - name: Setup India channels
         run: |
           mkdir -p epg-temp/sites/in
-          cp channels.in.xml epg-temp/sites/in/
+          cp channels.in.xml epg-temp/sites/in/channels.xml
       
-      - name: Generate India EPG
+      - name: Generate India EPG (FIXED COMMAND)
         run: |
           cd epg-temp
-          npm run grab -- --sites=in --days=7 --gzip --output=../epg_india.xml.gz
+          npm run grab -- --channels=sites/in/channels.xml --days=7 --gzip --output=../epg_india.xml.gz
       
       - name: Cleanup
         if: always()
