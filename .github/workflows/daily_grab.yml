@@ -1,27 +1,28 @@
-name: Daily EPG Grabber
+name: 7-Day Catchup EPG Grabber
 on:
   schedule:
-    - cron: '0 0 * * *' # Runs every day at 00:00 UTC
-  workflow_dispatch: # Allows manual run
+    - cron: '0 0 * * *' # Runs at Midnight UTC every day
+  workflow_dispatch:
 
 jobs:
-  grab-and-deploy:
+  grab-epg:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Fetch EPG and Channels
+      - name: Grab Multi-Day EPG
         run: |
-          # Fetching the most stable Indian EPG source (approx 500+ channels)
+          mkdir -p public
+          # Fetching an EPG source known for 7-day history/catchup data
           curl -L "https://avkb.short.gy/tsepg.xml.gz" -o public/epg.xml.gz
-          # Unzip it so the browser can read it easily
-          gunzip -f public/epg.xml.gz
-          # Fetch the M3U for Logos and IDs
+          # We keep it as .gz to save space and bandwidth, players handle .gz perfectly
+          
+          # Fetch a matching M3U with catchup tags
           curl -L "https://iptv-org.github.io/iptv/countries/in.m3u" -o public/channels.m3u
 
       - name: Deploy to GitHub Pages
         uses: JamesIves/github-pages-deploy-action@v4
         with:
           folder: public
-          branch: gh-pages # This creates a special branch for your website
+          branch: gh-pages
