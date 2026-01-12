@@ -1,7 +1,13 @@
 <?xml version="1.0" ?>
-<tv generator-info-name="Self-EPG-Generator" generator-info-url="https://github.com/your-username">
+<tv generator-info-name="Indian-EPG-Generator">
   <channel id="StarPlus.in">
     <display-name>Star Plus</display-name>
+  </channel>
+  <channel id="ZeeTV.in">
+    <display-name>Zee TV</display-name>
+  </channel>
+  <channel id="SonySET.in">
+    <display-name>Sony SET</display-name>
   </channel>
   <channel id="StarSports1.in">
     <display-name>Star Sports 1</display-name>
