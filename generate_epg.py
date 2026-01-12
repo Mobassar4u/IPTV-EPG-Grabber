@@ -4,12 +4,13 @@ import xml.etree.ElementTree as ET
 from xml.dom import minidom
 import time
 
-# 1. UPDATED CHANNEL LIST (Using Tata Play Web IDs)
 CHANNELS = [
     {"id": "117", "name": "Star Plus", "xmlid": "StarPlus.in"},
     {"id": "143", "name": "Zee TV", "xmlid": "ZeeTV.in"},
     {"id": "130", "name": "Sony SET", "xmlid": "SonySET.in"},
-    {"id": "402", "name": "Star Sports 1", "xmlid": "StarSports1.in"},
+    # Star Sports 1 often changes between 402, 401, or a dedicated slug
+    {"id": "401", "name": "Star Sports 1", "xmlid": "StarSports1.in"}, 
+    {"id": "1502", "name": "Sun TV", "xmlid": "SunTV.in"},
 ]
 
 # 2. ADDED BROWSER HEADERS (Crucial to avoid "Line 1 Column 1" error)
