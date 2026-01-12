@@ -1,6 +1,9 @@
 name: Update EPG Data
 
-workflow_dispatch: # Allows you to run this manually from the Actions tab
+on:
+  # schedule:
+  #   - cron: '0 0 * * *'  # This job is now disabled
+  workflow_dispatch:      # Keep this so you can still run it manually
 
 jobs:
   build:
