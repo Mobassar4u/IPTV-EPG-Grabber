@@ -8,7 +8,7 @@ from requests.adapters import HTTPAdapter
 from urllib3.util.retry import Retry
 
 # 1. UPDATED STABLE ENDPOINTS (2026)
-BASE_URL = "https://www.tataplay.com/web-guide/api/v1"
+BASE_URL = "https://ts-api.videoready.tv/content-detail/pub/api/v1"
 MASTER_LIST_URL = f"{BASE_URL}/channels?limit=600"
 SCHEDULE_URL_TEMPLATE = BASE_URL + "/channels/{id}/schedule?date={date}"
 
