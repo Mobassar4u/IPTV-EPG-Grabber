@@ -1,4 +1,4 @@
-name: Indian Hybrid EPG (Tata + Jio)
+name: Indian Hybrid EPG
 
 on:
   schedule:
@@ -29,7 +29,7 @@ jobs:
 
       - name: Generate Hybrid EPG
         run: |
-          python generate_hybrid_epg.py
+          python Hybrid_EPG.py
 
       - name: Commit and push EPG
         run: |
