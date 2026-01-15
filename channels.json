@@ -1,0 +1,16 @@
+[
+  {
+    "id":"starplus",
+    "name":"Star Plus",
+    "logo":"https://upload.wikimedia.org/wikipedia/en/4/4f/Star_Plus_Logo.png",
+    "tata_id":"24",
+    "jio_id":"144"
+  },
+  {
+    "id":"colors",
+    "name":"Colors TV",
+    "logo":"https://upload.wikimedia.org/wikipedia/en/2/2f/Colors_TV_logo.png",
+    "tata_id":"40",
+    "jio_id":"143"
+  }
+]
