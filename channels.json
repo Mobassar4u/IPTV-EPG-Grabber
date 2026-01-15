@@ -1,23 +1,128 @@
 [
-  {"name":"Star Plus","jio_id":"101","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Star_Plus.png","language":"Hindi","category":"Entertainment","hd":true},
-  {"name":"Colors TV","jio_id":"102","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Colors_TV.png","language":"Hindi","category":"Entertainment","hd":true},
-  {"name":"Sony Entertainment Television","jio_id":"103","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/SET.png","language":"Hindi","category":"Entertainment","hd":true},
-  {"name":"Zee TV","jio_id":"104","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Zee_TV.png","language":"Hindi","category":"Entertainment","hd":true},
-  {"name":"Star Gold","jio_id":"105","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Star_Gold.png","language":"Hindi","category":"Movies","hd":true},
-  {"name":"Sony Max","jio_id":"106","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Sony_Max.png","language":"Hindi","category":"Movies","hd":true},
-  {"name":"Zee Cinema","jio_id":"107","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Cinema.png","language":"Hindi","category":"Movies","hd":true},
-  {"name":"Star Bharat","jio_id":"108","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Star_Bharat.png","language":"Hindi","category":"Entertainment","hd":true},
-  {"name":"Sony SAB","jio_id":"109","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/SAB_TV.png","language":"Hindi","category":"Entertainment","hd":true},
-  {"name":"&TV","jio_id":"110","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/And_TV.png","language":"Hindi","category":"Entertainment","hd":true},
-  {"name":"Colors Rishtey","jio_id":"111","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Colors_Rishtey.png","language":"Hindi","category":"Entertainment","hd":true},
-  {"name":"Zee Anmol","jio_id":"112","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Zee_Anmol.png","language":"Hindi","category":"Entertainment","hd":true},
-  {"name":"Sony Pal","jio_id":"113","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Sony_PAL.png","language":"Hindi","category":"Entertainment","hd":true},
-  {"name":"Star Sports 1","jio_id":"201","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_1.png","language":"English","category":"Sports","hd":true},
-  {"name":"Star Sports 2","jio_id":"202","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Star_Sports_2.png","language":"English","category":"Sports","hd":true},
-  {"name":"Sony Ten 1","jio_id":"203","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Sony_Ten_1.png","language":"English","category":"Sports","hd":true},
-  {"name":"Sony Ten 2","jio_id":"204","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Sony_Ten_2.png","language":"English","category":"Sports","hd":true},
-  {"name":"Sony Ten 3","jio_id":"205","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Sony_Ten_3.png","language":"English","category":"Sports","hd":true},
-  {"name":"DD National","jio_id":"301","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/DD_National.png","language":"Hindi","category":"News","hd":false},
-  {"name":"NDTV 24x7","jio_id":"302","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/NDTV_24x7.png","language":"English","category":"News","hd":true},
-  {"name":"Aaj Tak","jio_id":"303","logo":"https://jiotvimages.cdn.jio.com/dare_images/images/Aaj_Tak.png","language":"Hindi","category":"News","hd":true} 
+  {
+    "id": "star-plus",
+    "name": "Star Plus",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/4f/Star_Plus_Logo.png",
+    "tata_id": "117",
+    "jio_id": "144"
+  },
+  {
+    "id": "star-plus-hd",
+    "name": "Star Plus HD",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/4f/Star_Plus_Logo.png",
+    "tata_id": "115",
+    "jio_id": "145"
+  },
+  {
+    "id": "sony-set",
+    "name": "Sony Entertainment Television",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/c5/Sony_Entertainment_Television_logo.png",
+    "tata_id": "130",
+    "jio_id": "133"
+  },
+  {
+    "id": "sony-sab",
+    "name": "Sony SAB",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/d/df/Sony_SAB_logo_2022.png",
+    "tata_id": "134",
+    "jio_id": "153"
+  },
+  {
+    "id": "colors",
+    "name": "Colors",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/2/2f/Colors_TV_logo.png",
+    "tata_id": "149",
+    "jio_id": "143"
+  },
+  {
+    "id": "zee-tv",
+    "name": "Zee TV",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/d/db/Zee_TV_logo.png",
+    "tata_id": "143",
+    "jio_id": "138"
+  },
+  {
+    "id": "star-gold",
+    "name": "Star Gold",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/5/52/Star_Gold_logo.png",
+    "tata_id": "310",
+    "jio_id": "165"
+  },
+  {
+    "id": "zee-cinema",
+    "name": "Zee Cinema",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/0/07/Zee_Cinema_logo.png",
+    "tata_id": "321",
+    "jio_id": "173"
+  },
+  {
+    "id": "sony-max",
+    "name": "Sony Max",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/7/72/Sony_MAX_logo.png",
+    "tata_id": "314",
+    "jio_id": "168"
+  },
+  {
+    "id": "star-sports-1",
+    "name": "Star Sports 1",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/4d/Star_Sports_logo.png",
+    "tata_id": "455",
+    "jio_id": "401"
+  },
+  {
+    "id": "star-sports-1-hindi",
+    "name": "Star Sports 1 Hindi",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/4d/Star_Sports_logo.png",
+    "tata_id": "460",
+    "jio_id": "411"
+  },
+  {
+    "id": "aaj-tak",
+    "name": "Aaj Tak",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/2/24/Aaj_Tak_Logo.png",
+    "tata_id": "509",
+    "jio_id": "452"
+  },
+  {
+    "id": "ndtv-india",
+    "name": "NDTV India",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c5/NDTV_India.png",
+    "tata_id": "506",
+    "jio_id": "456"
+  },
+  {
+    "id": "republic-bharat",
+    "name": "Republic Bharat",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/2/2e/Republic-Bharat-Logo.png",
+    "tata_id": "521",
+    "jio_id": "472"
+  },
+  {
+    "id": "discovery",
+    "name": "Discovery Channel",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Discovery_logo_2019.svg",
+    "tata_id": "714",
+    "jio_id": "601"
+  },
+  {
+    "id": "nick",
+    "name": "Nickelodeon",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Nickelodeon_2023.svg",
+    "tata_id": "663",
+    "jio_id": "553"
+  },
+  {
+    "id": "pogo",
+    "name": "Pogo",
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/4c/Pogo_logo.png",
+    "tata_id": "670",
+    "jio_id": "559"
+  },
+  {
+    "id": "disney",
+    "name": "Disney Channel",
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/d/d3/Disney_Channel_logo.svg",
+    "tata_id": "658",
+    "jio_id": "557"
+  }
 ]
